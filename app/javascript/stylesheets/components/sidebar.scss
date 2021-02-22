@@ -1,0 +1,48 @@
+$bg-primary: #f6c32c;
+$bg-secondary: #141418;
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $bg-primary;
+}
+
+.logo .logo-text {
+  letter-spacing: 0.25rem;
+}
+
+@layer components {
+  .side-navbar {
+    @apply fixed bottom-0 overflow-scroll duration-500 bg-yellow-400 sm:bottom-auto transition-width sm:w-20 sm:hover:w-64 sm:h-full;
+
+    .nav-link {
+      @apply flex items-center justify-center h-20 text-white transition-all duration-500 hover:bg-black hover:text-white sm:justify-start;
+    }
+
+    .link-text {
+      @apply hidden ml-4 transition-all duration-500 opacity-0 sm:inline;
+    }
+
+    &:hover .link-text {
+      @apply opacity-100;
+    }
+
+     .logo {
+      @apply hidden w-full mb-4 text-2xl font-bold tracking-wide text-center text-white uppercase bg-black sm:block;
+    }
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 640px) {
+  .side-navbar:hover .logo i
+  {
+    margin-left: 13rem;
+  }
+}
