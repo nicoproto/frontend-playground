@@ -645,6 +645,7 @@ module.exports = {
       colors: 'background-color, border-color, color, fill, stroke',
       opacity: 'opacity',
       shadow: 'box-shadow',
+      width: 'width',
       transform: 'transform',
     },
     transitionTimingFunction: {
@@ -804,7 +805,7 @@ module.exports = {
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     objectFit: ['responsive'],
-    objectPosition: ['responsive'],
+    objectPosition: ['responsive', 'group-hover'],
     opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
     order: ['responsive'],
     outline: ['responsive', 'focus-within', 'focus'],
