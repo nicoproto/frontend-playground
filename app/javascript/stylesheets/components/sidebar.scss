@@ -13,16 +13,22 @@ body::-webkit-scrollbar-thumb {
   background: $bg-primary;
 }
 
-.logo .logo-text {
-  letter-spacing: 0.25rem;
-}
-
 @layer components {
+  .logo .logo-text {
+    @apply tracking-wider-xl;
+  }
+
   .side-navbar {
-    @apply fixed bottom-0 overflow-scroll duration-500 bg-yellow-400 sm:bottom-auto transition-width sm:w-20 sm:hover:w-64 sm:h-full;
+    @apply
+      fixed bottom-0 overflow-scroll bg-yellow-400
+      transition-width duration-500
+      sm:bottom-auto sm:w-20 sm:hover:w-64 sm:h-full;
 
     .nav-link {
-      @apply flex items-center justify-center h-20 text-white transition-all duration-500 hover:bg-black hover:text-white sm:justify-start;
+      @apply
+        flex items-center justify-center h-20 text-white
+        transition-all duration-500
+        hover:bg-black hover:text-white sm:justify-start;
     }
 
     .link-text {
@@ -34,15 +40,8 @@ body::-webkit-scrollbar-thumb {
     }
 
      .logo {
-      @apply hidden w-full mb-4 text-2xl font-bold tracking-wide text-center text-white uppercase bg-black sm:block;
+      @apply font-bold  text-center text-2xl text-white uppercase tracking-wide bg-black mb-4
+      hidden w-full sm:block;
     }
-  }
-}
-
-/* Large screens */
-@media only screen and (min-width: 640px) {
-  .side-navbar:hover .logo i
-  {
-    margin-left: 13rem;
   }
 }
