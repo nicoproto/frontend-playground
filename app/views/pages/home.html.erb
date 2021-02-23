@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container text-center">
+  <h1 class="my-4 text-4xl font-bold">Where to go now?</h1>
+
+  <%= link_to "Sidebar", sidebar_path, class: "px-8 py-2 bg-yellow-400 inline-block text-white rounded hover:bg-yellow-500" %>
+  <%= link_to "Kitchen Sink", kitchensink_path, class: "px-8 py-2 bg-yellow-400 inline-block text-white rounded hover:bg-yellow-500" %>
+</div>
