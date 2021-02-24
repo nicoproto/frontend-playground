@@ -1,0 +1,30 @@
+.btn-3d {
+    box-shadow: -6px 6px orange;
+  }
+    .btn-3d:active {
+      transform: translate(-3px, 3px);
+      box-shadow: -3px 3px orange;
+    }
+
+.btn-3d-circle {
+  box-shadow: 0 1px 0 hsl(39, 100%, 50%),
+							0 2px 0 hsl(39, 100%, 48%),
+							0 3px 0 hsl(39, 100%, 46%),
+							0 4px 0 hsl(39, 100%, 44%),
+							0 5px 0 hsl(39, 100%, 42%),
+							0 6px 0 hsl(39, 100%, 40%),
+							0 7px 0 hsl(39, 100%, 38%),
+							0 8px 0 hsl(39, 100%, 36%),
+							0 9px 0 hsl(39, 100%, 34%);
+}
+
+	.btn-3d-circle:active {
+		transform: translateY(2px);
+		box-shadow: 0 1px 0 hsl(39, 100%, 50%),
+                0 2px 0 hsl(39, 100%, 48%),
+                0 3px 0 hsl(39, 100%, 46%),
+                0 4px 0 hsl(39, 100%, 44%),
+                0 5px 0 hsl(39, 100%, 42%),
+                0 6px 0 hsl(39, 100%, 40%),
+                0 7px 0 hsl(39, 100%, 38%);
+	}
