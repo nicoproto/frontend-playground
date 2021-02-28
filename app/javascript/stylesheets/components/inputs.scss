@@ -4,28 +4,11 @@
 }
 
 // SELECT DROPDOWN INPUT
-.select-input select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+.select-input::after {
+  @apply font-black absolute top-0 right-0 h-full w-8 flex cursor-pointer transition pointer-events-none items-center;
+  content: '\f078';
+  font-family: "Font Awesome 5 Free";
 }
-
-  .select-input::after {
-    content: '\f078';
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 2rem;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    cursor: pointer;
-    transition: .25s all ease;
-  }
 
 // CHECKBOXES
 .checkbox-input {
@@ -37,7 +20,7 @@
   }
 
   label:after {
-    @apply absolute rounded-full w-8 h-8 bg-white border border-gray-300 rounded-full absolute cursor-pointer z-10 right-6 inset-y-1/2 pl-2 text-white pt-0.5 font-black transition transform -translate-y-2/4;
+    @apply absolute rounded-full w-8 h-8 bg-white border border-gray-300 cursor-pointer z-10 right-6 inset-y-1/2 pl-2 text-white pt-0.5 font-black transition transform -translate-y-2/4;
     content: '\f00c';
     font-family: "Font Awesome 5 Free";
   }
