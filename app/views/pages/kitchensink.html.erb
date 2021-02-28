@@ -50,7 +50,7 @@
       <h3 class="my-4 text-xl font-bold">2.4 Special input fields</h3>
       <h4 class="my-4 text-lg font-bold">2.4.1 Select input</h4>
       <div class="relative w-full select-input">
-        <select class="w-full px-4 py-3 transition duration-300 border border-gray-300 rounded test focus:outline-none focus:shadow-inner focus:border-yellow-300" id="mySelectID">
+        <select class="w-full px-4 py-3 transition duration-300 border border-gray-300 rounded test focus:outline-none focus:shadow-inner focus:border-yellow-300 appearance-none" id="mySelectID">
           <option selected>Choose wisely...</option>
           <option value="1">Pikachu</option>
           <option value="2">Bulbasaur</option>
@@ -60,12 +60,16 @@
       </div>
       <h4 class="my-4 text-lg font-bold">2.4.2 Checkboxes</h4>
       <div class="my-4 bg-white checkbox-input">
-        <input id="option1" name="option1" type="checkbox" class="hidden"/>
-        <label for="option1" class="relative z-10 block w-full px-4 py-3 overflow-hidden text-black transition border border-gray-300 rounded cursor-pointer checked:border-0">Option One</label>
+        <input id="option_one" name="option_one" type="checkbox" class="hidden"/>
+        <label for="option_one" class="relative z-10 block w-full px-4 py-3 overflow-hidden text-black transition border border-gray-300 rounded cursor-pointer pr-20">Option One</label>
+      </div>
+      <div class="my-4 bg-white checkbox-input">
+        <input id="option_two" name="option_two" type="checkbox" class="hidden"/>
+        <label for="option_two" class="relative z-10 block w-full px-4 py-3 overflow-hidden text-black transition border border-gray-300 rounded cursor-pointer pr-20">Option Two</label>
       </div>
       <div class="bg-white checkbox-input">
-        <input id="option2" name="option2" type="checkbox" class="hidden"/>
-        <label for="option2" class="relative z-10 block w-full px-4 py-3 overflow-hidden text-black transition border border-gray-300 rounded cursor-pointer checked:border-0">Option Two</label>
+        <input id="option_text" name="option_text" type="checkbox" class="hidden"/>
+        <label for="option_text" class="relative z-10 block w-full px-4 py-3 pr-20 overflow-hidden text-black transition border border-gray-300 rounded cursor-pointer">Option with a lot of text lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam voluptatem eveniet porro eum nobis necessitatibus quaerat aut suscipit officiis esse ab, quos odio nihil, itaque, debitis assumenda architecto quas.</label>
       </div>
     </div>
   </div>

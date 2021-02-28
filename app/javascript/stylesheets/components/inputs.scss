@@ -4,79 +4,37 @@
 }
 
 // SELECT DROPDOWN INPUT
-.select-input select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+.select-input::after {
+  @apply font-black absolute top-0 right-0 h-full w-8 flex cursor-pointer transition pointer-events-none items-center;
+  content: '\f078';
+  font-family: "Font Awesome 5 Free";
 }
-
-  .select-input::after {
-    content: '\f078';
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 2rem;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    cursor: pointer;
-    transition: .25s all ease;
-  }
 
 // CHECKBOXES
-.checkbox-input label:before {
-  @apply rounded-full bg-yellow-300 absolute opacity-0 inset-2/4 w-4 h-4 transition duration-500;
-  content: '';
-  transform: translate(-50%, -50%) scale3d(1, 1, 1);
-  z-index: -1;
-}
-
-.checkbox-input label:after {
-  @apply absolute rounded-full;
-  width: 32px;
-  height: 32px;
-  content: '';
-  border: 2px solid #D1D7DC;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
-  background-repeat: no-repeat;
-  background-position: 2px 3px;
-  border-radius: 50%;
-  z-index: 2;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  transition: all 200ms ease-in;
-}
-
-.checkbox-input input:checked ~ label {
-  color: #fff;
-
-  &:before {
-    transform: translate(-50%, -50%) scale3d(56, 56, 1);
-    opacity: 1;
+.checkbox-input {
+  label:before {
+    @apply rounded-full bg-yellow-300 absolute opacity-0 inset-2/4 w-6 h-6 transition duration-700 md:duration-500;
+    content: '';
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    z-index: -1;
   }
 
-  &:after {
-    @apply bg-yellow-600 border-yellow-600;
+  label:after {
+    @apply absolute rounded-full w-8 h-8 bg-white border border-gray-300 cursor-pointer z-10 right-6 inset-y-1/2 pl-2 text-white pt-0.5 font-black transition transform -translate-y-2/4;
+    content: '\f00c';
+    font-family: "Font Awesome 5 Free";
   }
 
-    input {
-      width: 32px;
-      height: 32px;
-      order: 1;
-      z-index: 2;
-      position: absolute;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      visibility: hidden;
+  input:checked ~ label {
+    @apply text-white border-yellow-300;
+
+    &:before {
+      transform: translate(-50%, -50%) scale3d(56, 56, 1);
+      @apply opacity-100;
     }
+
+    &:after {
+      @apply bg-yellow-600 border-yellow-600;
+    }
+  }
 }
