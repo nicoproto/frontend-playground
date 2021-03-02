@@ -11,7 +11,7 @@
 }
 
 // CHECKBOXES
-.checkbox-input {
+.toggleable-input {
   label:before {
     @apply rounded-full bg-yellow-300 absolute opacity-0 inset-2/4 w-6 h-6 transition duration-700 md:duration-500;
     content: '';
