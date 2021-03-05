@@ -1,13 +1,7 @@
-// SEARCH FORM
-.search-form input[type="submit"] {
-  font-family: "Font Awesome 5 Free";
-}
-
 // SELECT DROPDOWN INPUT
 .select-input::after {
-  @apply font-black absolute top-0 right-0 h-full w-8 flex cursor-pointer transition pointer-events-none items-center;
+  @apply font-black absolute top-0 right-0 h-full w-8 flex cursor-pointer transition pointer-events-none items-center font-fontawesome;
   content: '\f078';
-  font-family: "Font Awesome 5 Free";
 }
 
 // CHECKBOXES
@@ -20,9 +14,8 @@
   }
 
   label:after {
-    @apply absolute rounded-full w-8 h-8 bg-white border border-gray-300 cursor-pointer z-10 right-6 inset-y-1/2 pl-2 text-white pt-0.5 font-black transition transform -translate-y-2/4;
+    @apply absolute rounded-full w-8 h-8 bg-white border border-gray-300 cursor-pointer z-10 right-6 inset-y-1/2 pl-2 text-white pt-0.5 font-black transition transform -translate-y-2/4 font-fontawesome;
     content: '\f00c';
-    font-family: "Font Awesome 5 Free";
   }
 
   input:checked ~ label {
