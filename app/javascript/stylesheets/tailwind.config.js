@@ -190,6 +190,9 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      fontawesome: [
+        '"Font Awesome 5 Free"',
+      ]
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
